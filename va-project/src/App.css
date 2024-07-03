@@ -1,0 +1,305 @@
+.App {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  padding: .5%;
+  overflow: hidden;
+}
+
+div.TopBar {
+  height: 3rem;
+  width: -webkit-fill-available;
+  display: flex;
+  background-color: #3D3D3D;
+  align-items: center;
+  margin:.5%
+}
+
+.TopBar>h1{
+  font-size: 1.5vw;
+  color: white;
+  font-weight: bold;
+  margin: 0;
+}
+
+.ScreenCenter {
+  display: flex;
+  flex-direction: row;
+  width: -webkit-fill-available;
+  max-height:52.5%;
+  padding: 1rem 0 0 0
+}
+
+.Filters {
+  display: flex;
+  flex-direction: column;
+  max-width:40%;
+  min-width:40%;
+  height: -webkit-fill-available;
+}
+
+.Map {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+
+.MapLegend {
+  position:absolute;
+  background-color:#3D3D3D;
+  color:white;
+  display:flex;
+  flex-direction:row;
+  padding:1%;
+  bottom:0;
+  left:0;
+  margin:1%;
+  max-height: 1.5rem;
+  max-width:100%;
+  z-index:1000;
+  transition: all 500ms;
+}
+
+.MapLegend > img {
+  cursor: pointer;
+}
+.ScreenBottom 
+{
+  display: flex;
+  flex-direction: row;
+  width: -webkit-fill-available;
+  max-height:45%;
+  padding: 1rem 0 0 0
+}
+
+.ScreenBottom > div, .ScreenCenter > div {
+  background-color: #3D3D3D;
+  align-items: center;
+  justify-content:center;
+}
+
+.DimReduction {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: -webkit-fill-available;
+}
+
+.ParallelCoordinates {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem 0 1rem ;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+
+.Heatmap {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: -webkit-fill-available;
+}
+
+
+.ScatterplotLegend {
+  margin: 3.5% 3.5% 0% 0%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+  color: yellow;
+  padding: 1%;
+  border-radius: 5%;
+  width: max-content;
+  max-width: 100%;
+  z-index: 1;
+
+  border: 1px #ccc solid;
+}
+
+.ScatterplotLegend> div:first-child {
+  color: red;
+  
+  flex-direction: row;
+}
+
+.ScatterplotLegend > div {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  height: 1.5rem;
+}
+
+.ScatterplotLegend > div > svg {
+ 
+  max-height: 100%;
+  aspect-ratio: 1/1;
+}
+
+.ScatterplotLegend > div > svg > g >circle{
+   max-height: 100%;
+   aspect-ratio: 1/1;
+}
+.ScatterplotLegend> div:last-child {
+  color: lightgreen;
+  flex-direction: row;
+}
+
+
+/* SECONDO LAYOUT */
+
+.Dashboard {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  position: relative;
+}
+
+.LeftBoard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* LEFT SIDE */
+
+.LeftTop {
+  flex: 1;
+  display: flex;
+  flex: row;
+  position: relative;
+}
+
+.LeftTopScatter {
+  flex: 1;
+  margin:.5%;
+  position: relative;
+  background-color: #3D3D3D;
+  aspect-ratio: 1 / 1;
+}
+
+.LeftTopHeatmap {
+  flex: 1;
+  margin:.5%;
+  position: relative;
+  background-color: #3D3D3D;
+}
+
+
+.LeftBottom {
+  flex: 1;
+  display: flex;
+  flex: row;
+  margin:.5%;;
+  position: relative;
+  background-color: #3D3D3D;
+}
+
+/* RIGH SIDE */
+.RightBoard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+}
+
+.RighTop {
+  flex: 2;
+  display: flex;
+  position: relative;
+  margin:.5%;
+  background-color: #3D3D3D;
+}
+
+.RighBottom {
+  display: flex;
+  flex: 1;
+  position: relative;
+  margin:.5%;
+  background-color: #3D3D3D;
+} 
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 53px;
+  height: 24px;
+  padding-top: 1%;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #ccc;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ccc;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.leaflet-layer,
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out,
+.leaflet-control-attribution {
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
